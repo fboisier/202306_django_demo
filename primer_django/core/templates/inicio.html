@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esto es DJANGO</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">   
+</head>
+<body>
+    <h1>DJANGO</h1>
+
+    <h1>Info del servidor:</h1>
+    <p>Nombre: {{name}}</p>
+    <p>Color: {{favorite_color}}</p>
+    <p>Mascotas</p>
+    <ul>
+    {% for pet in pets %}
+    <li>{{pet}}</li>
+    {% endfor %}
+    </ul>
+
+    <h3>{{time}}</h3>
+    <h3>{% now "DATETIME_FORMAT" %}</h3>
+
+</body>
+</html>
